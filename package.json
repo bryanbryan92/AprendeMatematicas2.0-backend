@@ -1,0 +1,19 @@
+{
+  "name": "rockola",
+  "version": "1.0.0",
+  "description": "Proyecto Rockola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanbryan92/rockola-backend.git"
+  },
+  "author": "Bryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryanbryan92/rockola-backend/issues"
+  },
+  "homepage": "https://github.com/bryanbryan92/rockola-backend#readme"
+}
