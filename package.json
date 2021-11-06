@@ -1,7 +1,7 @@
 {
-  "name": "rockola",
+  "name": "AprendeMatematicas2.0",
   "version": "1.0.0",
-  "description": "Proyecto Rockola",
+  "description": "Proyecto AprendeMatematicas2.0",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
