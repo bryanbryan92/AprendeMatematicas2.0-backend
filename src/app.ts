@@ -1,4 +1,5 @@
 import express from 'express';
+import usuariosRoutes from './routes/usuarios';
 
 const app = express();
 const port = 3000;
@@ -6,6 +7,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+usuariosRoutes(app);
 
 app.get('/ruta1/:id', (req, res) => {
     console.log(req.headers);
