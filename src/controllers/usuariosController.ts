@@ -1,6 +1,17 @@
+import executeQuery from "../services/mysql.service"
 
-const obtenerUsuarios = (req, res) => {
-    res.send('obtenerUsuarios desde el controlador')
+const obtenerUsuarios = async(req, res) => {
+    try{
+        const response = await executeQuery('SELECT * FROM usuarios');
+        console.log(response);
+        const data = {
+            message: `${response.length} datos encontrados`,
+            datos: response.length > 0 ? response: null
+        }
+        res.json(data);
+    }catch(error){
+        res.status(500).send(error);
+    }
 }
 const obtenerUsuario = (req, res) => {
     res.send('obtenerUsuario desde el controlador')

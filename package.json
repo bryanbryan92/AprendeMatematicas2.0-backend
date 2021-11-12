@@ -20,6 +20,7 @@
   "homepage": "https://github.com/bryanbryan92/rockola-backend#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mysql2": "^2.3.3-rc.0",
     "typescript": "^4.4.4"
   },
   "devDependencies": {

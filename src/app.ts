@@ -1,5 +1,6 @@
 import express from 'express';
 import usuariosRoutes from './routes/usuarios';
+import config from './config/config';
 
 const app = express();
 const port = 3000;
@@ -17,6 +18,6 @@ app.get('/ruta1/:id', (req, res) => {
     res.send('Prueba del servidor');
 });
 
-app.listen(port, () => {
-    return console.log(`servidor corriendo sobre el puerto ${port}`)
+app.listen(config.PORT, () => {
+    return console.log(`servidor corriendo sobre el puerto ${config.PORT}`)
 });
