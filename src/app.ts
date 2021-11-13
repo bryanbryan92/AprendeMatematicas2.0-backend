@@ -10,13 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 usuariosRoutes(app);
 
-app.get('/ruta1/:id', (req, res) => {
-    console.log(req.headers);
-    console.log(req.params);
-    //console.log(req.query);
-    console.log(req.body);
-    res.send('Prueba del servidor');
-});
+
 
 app.listen(config.PORT, () => {
     return console.log(`servidor corriendo sobre el puerto ${config.PORT}`)
