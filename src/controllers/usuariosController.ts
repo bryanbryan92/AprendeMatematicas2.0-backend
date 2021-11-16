@@ -1,4 +1,4 @@
-import executeQuery from "../services/mysql.service"
+import executeQuery from "../services/mysql.service";
 
 const obtenerUsuarios = async(req, res) => {
     try{
@@ -30,7 +30,8 @@ const obtenerUsuario = (req, res) => {
 const agregarUsuario = async(req, res) => {
     const {nombre, apellido, edad, email, contrasena, grado} = req.body;
     try{
-        const response = await executeQuery(`INSERT INTO usuarios (nombre, apellido, edad, email, contrasena, grado) VALUES ('${nombre}', '${apellido}', '${edad}', '${email}', '${contrasena}', '${grado}')`);
+        const response = await executeQuery(`INSERT INTO usuarios (nombre, apellido, edad, email, contrasena, grado) 
+        VALUES ('${nombre}', '${apellido}', '${edad}', '${email}', '${contrasena}', '${grado}')`);
         res.status(201).json({message: 'created', id: response.insertId});
     }catch(error){
         console.log(error);
@@ -40,7 +41,8 @@ const agregarUsuario = async(req, res) => {
 const actualizarUsuario = async(req, res) => {
     const {nombre, apellido, edad, email, contrasena, grado} = req.body;
     try{
-        const response = await executeQuery(`UPDATE usuarios SET nombre = '${nombre}', apellido = '${apellido}', edad = '${edad}', email = '${email}', contrasena = '${contrasena}', grado = '${grado}' WHERE id = ${req.params.id}`);
+        const response = await executeQuery(`UPDATE usuarios SET nombre = '${nombre}', apellido = '${apellido}', 
+        edad = '${edad}', email = '${email}', contrasena = '${contrasena}', grado = '${grado}' WHERE id = ${req.params.id}`);
         console.log(response);
         if(response.affectedRows > 0){
             res.json({message: 'updated'});

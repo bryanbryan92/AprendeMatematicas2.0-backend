@@ -10,8 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 usuariosRoutes(app);
 
-
-
 app.listen(config.PORT, () => {
     return console.log(`servidor corriendo sobre el puerto ${config.PORT}`)
 });
